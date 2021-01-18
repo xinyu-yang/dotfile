@@ -1,0 +1,20 @@
+#!/bin/sh
+
+# The famous "get a menu of emojis to copy" script.
+function def() {
+    read word
+    sdcv -n --utf8-output  $word 2>&1
+        #fold --width=$(tput cols)
+        #exit 0
+}
+
+# Get user selection via dmenu from emoji file.
+chosen=$(cat ~/.local/share/stardict/wordlist.10000 | dmenu -i )
+
+# Exit if none chosen.
+[ -z "$chosen" ] && exit
+
+
+#echo "echo $chosen | tr -d '\n' | xargs -i $0 def"
+notify-send "$(echo $chosen | tr -d '\n' | def)" &
+#notify-send "'$chosen' copied to clipboard." &

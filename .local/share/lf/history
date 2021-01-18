@@ -1,0 +1,32 @@
+: ?
+: help
+: remove
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: ?
+: help
+: delete 
+: !touch database
+: delete 
+: mkdir database
+: delete 
+: !touch database
+: delete 
+: !touch org.freedesktop.Notifications.service
+: q
+: !echo $HOME
+: !curl wttr.in
+: !curl wttr.in > weatherreport 
+: !mkdir dic
+: delete
+: delete
+: delete
+: !touch sdcv_ordering

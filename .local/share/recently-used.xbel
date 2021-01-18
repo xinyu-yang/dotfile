@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///home/yang/zotfile-5.0.16-fx.xpi" added="2021-01-16T11:57:41.697629Z" modified="2021-01-16T11:57:41.697643Z" visited="2021-01-16T11:57:41.697631Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-xpinstall"/>
+        <bookmark:applications>
+          <bookmark:application name="Zotero" exec="&apos;zotero %u&apos;" modified="2021-01-16T11:57:41.697635Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/yang/OneDrive/ZotFile" added="2021-01-16T12:01:13.133165Z" modified="2021-01-16T12:10:17.646101Z" visited="2021-01-16T12:01:13.133167Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Zotero" exec="&apos;zotero %u&apos;" modified="2021-01-16T12:10:17.646096Z" count="2"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/yang/.local/share/Zotero" added="2021-01-16T12:04:16.175094Z" modified="2021-01-16T12:04:16.175117Z" visited="2021-01-16T12:04:16.175096Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Zotero" exec="&apos;zotero %u&apos;" modified="2021-01-16T12:04:16.175104Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/yang/.local/share/Zotero/locate" added="2021-01-16T12:09:49.072304Z" modified="2021-01-16T12:09:49.072332Z" visited="2021-01-16T12:09:49.072309Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Zotero" exec="&apos;zotero %u&apos;" modified="2021-01-16T12:09:49.072317Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///usr/bin/zathura" added="2021-01-16T17:16:52.522060Z" modified="2021-01-16T17:16:52.522086Z" visited="2021-01-16T17:16:52.522062Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="Zotero" exec="&apos;zotero %u&apos;" modified="2021-01-16T17:16:52.522068Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

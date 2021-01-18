@@ -1,0 +1,18 @@
+configuration {
+	modi: "run,ssh,window";
+	lines: 10;
+	bw: 0;
+	padding: 10;
+	show-icons: true;
+	terminal: "st";
+	case-sensitive: false;
+	sidebar-mode: true;
+	line-margin: 0;
+	separator-style: "solid";
+	scrollbar-width: 0;
+	theme: "/usr/share/rofi/themes/gruvbox-dark-hard.rasi";
+	color-normal: "#0032302f, #d8dee9, #0032302f, #cc458588, #32302f";
+	color-urgent: "#4d1b2b34, #ec5f67, #4d343d46, #4dec5f67, #d8dee9";
+	color-active: "#4d1b2b34, #6699cc, #4d343d46, #4d6699cc, #d8dee9";
+	color-window: "#4d32302f, #4d32302f, #0032302f";
+}
