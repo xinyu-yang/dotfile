@@ -30,3 +30,15 @@
 : delete
 : delete
 : !touch sdcv_ordering
+: delete
+: delete
+: !mkdir dotfile
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: delete 
+: !mkdir picom
+: delete 
+: !unzip 1110d8f134463199abeea81692cbbb56-25fbdbae35d62f72988344c16dcb33b7fc313c29.zip 
