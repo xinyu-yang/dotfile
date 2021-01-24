@@ -37,10 +37,12 @@ typedef struct {
 } Sp;
 const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
 const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd3[] = {TERMINAL, "-n", "spdict", "-g", "120x34", "-e", "dict", "1", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
 	{"spcalc",      spcmd2},
+	{"spdict",      spcmd3},
 };
 
 /* tagging */
@@ -57,6 +59,7 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
 	{ NULL,      "spterm",    NULL,       	    SPTAG(0),     1,           1,         0,        -1 },
 	{ NULL,      "spcalc",    NULL,       	    SPTAG(1),     1,           1,         0,        -1 },
+	{ NULL,      "spdict",    NULL,       	    SPTAG(2),     1,           1,         0,        -1 },
 };
 
 /* layout(s) */
@@ -85,6 +88,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define ALT Mod1Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
@@ -192,7 +196,8 @@ static Key keys[] = {
 	{ MODKEY,			XK_s,		togglesticky,	{0} },
 	/* { MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_d,		spawn,          SHCMD("dmenu_run") },
-	{ Mod1Mask,			XK_d,		spawn,          SHCMD("dict") },
+	{ ALT,			        XK_d,		spawn,          SHCMD("dict 0") },
+	{ ALT,			        XK_l,		togglescratch,  {.ui = 2} },
 	/* { MODKEY,			XK_d,		spawn,		SHCMD("") } }, */
 	{ MODKEY,			XK_f,		togglefullscr,	{0} },
 	{ MODKEY|ShiftMask,		XK_f,		setlayout,	{.v = &layouts[8]} },

@@ -81,10 +81,20 @@ ex=🎯:\
 *.java=♨:\
 "
 
+# Default programs:
+export EDITOR="vim"
+export TERMINAL="st"
+export BROWSER="google-chrome-stable"
+
+# ~/ Clean-up:
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+
 # sdcv path
-export STARDICT_DATA_DIR=$(XDG_DATA_HOME)/.local/share/stardict
+export STARDICT_DATA_DIR="${XDG_DATA_HOME}/stardict"
 
 #music player
-mpd &
+mpd > /dev/null 2>&1 &
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

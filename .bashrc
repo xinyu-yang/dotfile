@@ -4,6 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+. ~/.local/share/lf.bash
 
 ### alias
 alias ls='ls --color=auto'
