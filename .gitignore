@@ -10,14 +10,17 @@ slock/slock
 st/st
 .config/mpd/pid
 
-.local/share/
+# https://stackoverflow.com/questions/3203228/git-ignore-exception
+.local/share/*
 !.local/share/applications
 !.local/share/larbs
 !.local/share/stardict
 !.local/share/lf.bash
 
+.config/onedrive/*
+!.config/onedrive/config
+
 .config/google-chrome
-.config/onedrive
 .config/BraveSoftware
 .config/pulse
 .config/fcitx
