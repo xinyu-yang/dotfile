@@ -1,0 +1,26 @@
+*.o
+*.dat
+*history
+*.cache
+
+dwm/dwm
+dwmblocks/dwmblocks
+dmenu/dmenu
+slock/slock
+st/st
+.config/mpd/pid
+
+# https://stackoverflow.com/questions/3203228/git-ignore-exception
+.local/share/*
+!.local/share/applications
+!.local/share/larbs
+!.local/share/stardict
+!.local/share/lf.bash
+
+.config/onedrive/*
+!.config/onedrive/config
+
+.config/google-chrome
+.config/BraveSoftware
+.config/pulse
+.config/fcitx
