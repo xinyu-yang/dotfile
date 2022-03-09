@@ -95,6 +95,6 @@ export XDG_CACHE_HOME="$HOME/.cache"
 export STARDICT_DATA_DIR="${XDG_DATA_HOME}/stardict"
 
 #music player
-mpd > /dev/null 2>&1 &
+#mpd > /dev/null 2>&1 &
 
-[[ -f ~/.bashrc ]] && . ~/.bashrc
+[[ -f ~/dotfile/.bashrc ]] && . ~/dotfile/.bashrc
