@@ -111,4 +111,5 @@ if [ -d "$HOME/.local/bin" ]; then
     export "PATH=$HOME/.local/bin:$PATH"
 fi
 
-[[ -f ~/dotfile/.bashrc ]] && . ~/dotfile/.bashrc
+# dotfile/.bashrc will be imported in .bashrc
+#[[ -f ~/dotfile/.bashrc ]] && . ~/dotfile/.bashrc
