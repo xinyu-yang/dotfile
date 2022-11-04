@@ -1,4 +1,5 @@
-#
+#!/bin/bash
+# (: MARKER :)
 # ~/.bash_profile
 #
 
