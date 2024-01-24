@@ -13,6 +13,7 @@ st/st
 
 # https://stackoverflow.com/questions/3203228/git-ignore-exception
 .local/share/*
+.local/state/*
 !.local/share/applications
 !.local/share/larbs
 !.local/share/stardict
@@ -21,7 +22,9 @@ st/st
 .config/onedrive/*
 !.config/onedrive/config
 
-.config/google-chrome
-.config/BraveSoftware
+.config/microsoft-edge
+.config/yay
 .config/pulse
-.config/fcitx
+.config/calcurse
+.config/ibus
+.config/coc

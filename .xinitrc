@@ -39,7 +39,10 @@ fi
 #exec xterm -geometry 80x66+0+0 -name login
 
 # input method.
-fcitx &
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US
+export LC_CTYPE=en_US.UTF-8
+fcitx5 &
 
 # X composite manager.
 picom &
@@ -47,5 +50,6 @@ picom &
 # set background
 ~/.fehbg &
 
-#exec awesome
+# exec awesome
+dwmblocks 2>&1 /dev/null &
 exec dwm

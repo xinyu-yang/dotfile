@@ -1,24 +1,27 @@
 #!/bin/bash
 # (: MARKER :)
 # ~/.bash_profile
-#
 
-# Default programs:
-export EDITOR="vim"
-export TERMINAL="st"
-export BROWSER="google-chrome-stable"
-export TERM="xterm-256color"
+# Set env variables
+function setenv() { export $1=$2; }
+. $HOME/dotfile/.config/shell/env
 
-# ~/ Clean-up:
-export XDG_CONFIG_HOME="$HOME/.config"
-export XDG_DATA_HOME="$HOME/.local/share"
-export XDG_CACHE_HOME="$HOME/.cache"
-
-# sdcv path
-export STARDICT_DATA_DIR="${XDG_DATA_HOME}/stardict"
+export LESS="R"
+export LESS_TERMCAP_mb="$(printf '%b' '[1;31m')"
+export LESS_TERMCAP_md="$(printf '%b' '[1;36m')"
+export LESS_TERMCAP_me="$(printf '%b' '[0m')"
+export LESS_TERMCAP_so="$(printf '%b' '[01;44;33m')"
+export LESS_TERMCAP_se="$(printf '%b' '[0m')"
+export LESS_TERMCAP_us="$(printf '%b' '[1;32m')"
+export LESS_TERMCAP_ue="$(printf '%b' '[0m')"
+export LESSOPEN="| /usr/bin/highlight -O ansi %s 2>/dev/null"
 
 #music player
 #mpd > /dev/null 2>&1 &
+
+# Update PATH
+[ -d "$HOME/.local/bin" ] && export "PATH=$HOME/.local/bin:$PATH"
+[ -d "$HOME/.local/bin/statusbar" ] && export "PATH=$HOME/.local/bin/statusbar:$PATH"
 
 # if running bash
 if [ -n "$BASH_VERSION" ]; then
@@ -27,11 +30,3 @@ if [ -n "$BASH_VERSION" ]; then
     . "$HOME/.bashrc"
     fi
 fi
-
-# Update PATH
-if [ -d "$HOME/.local/bin" ]; then
-    export "PATH=$HOME/.local/bin:$PATH"
-fi
-
-# dotfile/.bashrc will be imported in .bashrc
-#[[ -f ~/dotfile/.bashrc ]] && . ~/dotfile/.bashrc

@@ -1,4 +1,0 @@
-GTK_IM_MODULE DEFAULT=fcitx
-QT_IM_MODULE DEFAULT=fcitx
-XMODIFIERS DEFAULT=\@im=fcitx
-PATH=/home/yang/.local/bin/statusbar:/home/yang/.local/bin
