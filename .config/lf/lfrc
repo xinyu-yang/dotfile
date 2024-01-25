@@ -61,6 +61,30 @@ cmd copyto ${{
 	notify-send "📋 File(s) copied." "File(s) copies to $dest."
 }}
 
+cmd extract ${{
+	clear; tput cup $(($(tput lines)/3)); tput bold
+	set -f
+	printf "%s\n\t" "$fx"
+	printf "extract?[y/N]"
+	read ans
+	[ $ans = "y" ] && {
+		case $fx in
+			*.tar.bz2)   tar xjf $fx     ;;
+			*.tar.gz)    tar xzf $fx     ;;
+			*.bz2)       bunzip2 $fx     ;;
+			*.rar)       unrar e $fx     ;;
+			*.gz)        gunzip $fx      ;;
+			*.tar)       tar xf $fx      ;;
+			*.tbz2)      tar xjf $fx     ;;
+			*.tgz)       tar xzf $fx     ;;
+			*.zip)       unzip $fx       ;;
+			*.Z)         uncompress $fx  ;;
+			*.7z)        7z x $fx        ;;
+			*.tar.xz)    tar xf $fx      ;;
+		esac
+	}
+}}
+
 cmd setbg "$1"
 cmd bulkrename $vidir
 
@@ -71,6 +95,7 @@ map gh
 map g top
 map D delete
 map C copyto
+map E extract
 map M moveto
 map <c-n> push :mkdir<space>
 map <c-r> reload
@@ -90,4 +115,4 @@ map b $setbg $f
 
 map <c-e> down
 map <c-y> up
-map V push :!nvim<space>
+map V push :!vim<space>
