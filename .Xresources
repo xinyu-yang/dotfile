@@ -13,9 +13,9 @@ Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
 
 
-!XTerm*background: bg_color
-!XTerm*foreground: fg_color
-!XTerm*pointerColor: cursor_color
+XTerm*background: bg_color
+XTerm*foreground: fg_color
+XTerm*pointerColor: cursor_color
 xterm*faceName: DejaVuSansMono Nerd Font Mono:style=Book
 xterm*faceSize: 10
 !XTerm*faceName: MesloLGS NF:Regular
