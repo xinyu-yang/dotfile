@@ -29,3 +29,6 @@ st/st
 .config/ibus
 .config/coc
 .config/fcitx
+.config/clash
+.config/dconf
+.config/menus
