@@ -10,7 +10,7 @@ function def1() {
 
 # Open sdcv in terminal mode.
 function def2() {
-    sdcv --utf8-output --color
+    sdcv --data-dir ~/.local/share/stardict/oxford -x --utf8-output --color
         #fold --width=$(tput cols) \
         #| less
         #exit 0

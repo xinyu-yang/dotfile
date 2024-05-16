@@ -14,4 +14,4 @@ setenv XDG_DATA_HOME "$HOME/.local/share"
 setenv XDG_CACHE_HOME "$HOME/.cache"
 
 
-setenv STARDICT_DATA_DIR "${XDG_DATA_HOME}/stardict"
+# setenv STARDICT_DATA_DIR "${XDG_DATA_HOME}/stardict"
