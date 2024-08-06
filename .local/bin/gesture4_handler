@@ -1,0 +1,17 @@
+#!/bin/bash
+
+case "$1" in
+	"swipe_left")
+		xdotool key Super_L+semicolon
+		#notify-send "here is gesture4 swipe left"
+		;;
+	"swipe_right")
+		xdotool key Super_L+g
+		;;
+	"swipe_up")
+		xdotool key Super_L+Tab
+		;;
+	"swipe_down")
+		xdotool key Super_L+0
+		;;
+esac

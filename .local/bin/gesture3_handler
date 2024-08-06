@@ -1,0 +1,55 @@
+#!/bin/bash
+
+# Get the active window's class
+active_window_class=$(xdotool getactivewindow getwindowclassname)
+
+# Define gestures for different applications
+case "$active_window_class" in
+    "microsoft-edge-stable")
+        case "$1" in
+            "swipe_left")
+                xdotool key alt+Right
+		#notify-send "here is gesture3 swipe left edge"
+                ;;
+            "swipe_right")
+                xdotool key alt+Left
+                ;;
+            "swipe_up")
+                xdotool key ctrl+t
+                ;;
+            "swipe_down")
+                xdotool key ctrl+w
+                ;;
+        esac
+        ;;
+    "St")
+        case "$1" in
+            "swipe_left")
+		#notify-send "here is gesture3 swipe left St"
+                ;;
+            "swipe_right")
+                ;;
+            "swipe_up")
+                ;;
+            "swipe_down")
+                ;;
+        esac
+        ;;
+    *)
+        case "$1" in
+            "swipe_left")
+                xdotool key alt+Left
+		#notify-send "here is gesture3 swipe left default"
+                ;;
+            "swipe_right")
+                xdotool key alt+Right
+                ;;
+            "swipe_up")
+                xdotool key ctrl+t
+                ;;
+            "swipe_down")
+                xdotool key ctrl+w
+                ;;
+        esac
+        ;;
+esac
