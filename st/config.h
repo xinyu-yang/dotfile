@@ -6,7 +6,7 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 //static char *font = "monospace:pixelsize=14:antialias=true:autohint=true";
-static char *font = "MesloLGS NF:pixelsize=14:antialias=true:autohint=true:style=Bold";
+static char *font = "DejaVuSansMono:pixelsize=14:antialias=true:autohint=true:style=Bold";
 static char *font2[] = { "JoyPixels:pixelsize=10:antialias=true:autohint=true" };
 static int borderpx = 2;
 
