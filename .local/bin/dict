@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Open sdcv in dmenu mode.
+function def1() {
+    read word
+    sdcv -n --utf8-output -2 ~/.local/share/stardict/dic -x  $word 2>&1
+        #fold --width=$(tput cols)
+        #exit 0
+}
+
+# Open sdcv in terminal mode.
+function def2() {
+    sdcv --data-dir ~/.local/share/stardict/oxford -x --utf8-output --color
+        #fold --width=$(tput cols) \
+        #| less
+        #exit 0
+}
+
+if [ $1 -eq 0 ]; then
+    chosen=$(cat ~/.local/share/stardict/wordlist.10000 | dmenu -i )
+
+    # Exit if none chosen.
+    [ -z "$chosen" ] && exit
+    notify-send "$(echo $chosen | tr -d '\n' | def1)" &
+
+elif [ $1 -eq 1 ]; then
+    def2
+fi
+#notify-send "'$chosen' copied to clipboard." &

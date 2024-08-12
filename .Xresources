@@ -1,0 +1,48 @@
+#if __has_include(".extend.Xresources")
+#include ".extend.Xresources"
+#endif
+
+#include ".xrdb/color/blur"
+
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: false
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+
+
+XTerm*background: bg_color
+XTerm*foreground: fg_color
+XTerm*pointerColor: cursor_color
+xterm*faceName: DejaVuSansMono Nerd Font Mono:style=Book
+xterm*faceSize: 10
+!XTerm*faceName: MesloLGS NF:Regular
+!XTerm*faceSize: 10
+XTerm*geometry: 90x23
+XTerm*alpha: 0.8
+
+
+! transparency percentage
+!100% - FF
+!95% - F2
+!90% - E6
+!85% - D9
+!80% - CC
+!75% - BF
+!70% - B3
+!65% - A6
+!60% - 99
+!55% - 8C
+!50% - 80
+!45% - 73
+!40% - 66
+!35% - 59
+!30% - 4D
+!25% - 40
+!20% - 33
+!15% - 26
+!10% - 1A
+!5% - 0D
+!0% - 00

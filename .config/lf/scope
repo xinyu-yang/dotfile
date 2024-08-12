@@ -1,0 +1,32 @@
+#!/bin/bash
+
+set -C -f
+IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
+
+# ANSI color codes are supported.
+# STDIN is disabled, so interactive scripts won't work properly
+
+# This script is considered a configuration file and must be updated manually.
+
+# Meanings of exit codes:
+# code | meaning    | action of ranger
+# -----+------------+-------------------------------------------
+# 0    | success    | Display stdout as preview
+# 1    | no preview | Display no preview at all
+# 2    | plain text | Display the plain content of the file
+
+case "$(file --dereference --brief --mime-type -- "$1")" in
+	text/html) w3m -dump "${1}" ;;
+	text/troff) man ./ "${1}" | col -b ;;
+	text/* | */xml | application/json | application/x-ndjson) bat -p --theme ansi --terminal-width "$(($4-2))" -f "$1" ;;
+	audio/* | application/octet-stream) mediainfo "$1" || exit 1 ;;
+	#application/zip | application/x-tar | application/gzip ) atool --list -- "${FILE_PATH}" ;;
+	application/zip ) unzip -l "${1}" | head -n 200;;
+	application/gzip | application/x-tar ) tar --list -f "${1}" | head -n 200 ;;
+	image/*) chafa --fill=block --symbols=block -c 256 -s 80x"${2}" "${1}" || exit 1;;
+	video/* | audio/*|application/octet-stream) mediainfo "${1}" || exit 1;;
+	*/pdf) pdftotext -l 10 -nopgbrk -q -- "${1}" - ;;
+	*opendocument*) odt2txt "${1}" ;;
+	*) head -n 100 "${1}" ;;
+esac
+exit 1

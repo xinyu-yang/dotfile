@@ -1,0 +1,94 @@
+# Prerequisites
+*.d
+
+# Object files
+*.o
+*.ko
+*.obj
+*.elf
+
+# Linker output
+*.ilk
+*.map
+*.exp
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Libraries
+*.lib
+*.a
+*.la
+*.lo
+
+# Shared objects (inc. Windows DLLs)
+*.dll
+*.so
+*.so.*
+*.dylib
+
+# Executables
+*.exe
+*.out
+*.app
+*.i*86
+*.x86_64
+*.hex
+
+# Debug files
+*.dSYM/
+*.su
+*.idb
+*.pdb
+
+# Kernel Module Compile Results
+*.mod*
+*.cmd
+.tmp_versions/
+modules.order
+Module.symvers
+Mkfile.old
+dkms.conf
+
+*.o
+*.swp
+*.dat
+*history
+*.cache
+
+
+dwm/dwm
+dwm/tags
+dwmblocks/dwmblocks
+dwmblocks/tags
+dmenu/dmenu
+dmenu/stest
+dmenu/tags
+slock-1.4/slock
+slock-1.4/tags
+st/st
+st/tags
+
+# https://stackoverflow.com/questions/3203228/git-ignore-exception
+.local/share/*
+.local/state/*
+!.local/share/larbs
+!.local/share/stardict
+!.local/share/lf.bash
+
+.config/
+!.config/dunst/
+!.config/fcitx5/conf/*.conf
+!.config/fcitx5/config
+!.config/fish/config.fish
+!.config/fontconfig/fonts.conf
+!.config/lf/
+!.config/mpd/mpd.conf
+!.config/ncmpcpp/bindings
+!.config/ncmpcpp/config
+!.config/shell/
+!.config/sxiv/
+!.config/tmux/
+!.config/zathura
+!.config/libinput-gestures.conf

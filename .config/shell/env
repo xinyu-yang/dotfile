@@ -1,0 +1,21 @@
+setenv GTK_IM_MODULE fcitx
+setenv QT_IM_MODULE fcitx
+setenv XMODIFIERS @im=fcitx
+
+
+setenv EDITOR "vim"
+setenv TERMINAL "st"
+setenv BROWSER "microsoft-edge-stable"
+setenv TERM "st-256color"
+
+
+setenv XDG_CONFIG_HOME "$HOME/.config"
+setenv XDG_DATA_HOME "$HOME/.local/share"
+setenv XDG_CACHE_HOME "$HOME/.cache"
+
+setenv LC_ALL en_US.UTF-8
+setenv LANG en_US.UTF-8
+setenv LANGUAGE en_US.UTF-8
+
+
+# setenv STARDICT_DATA_DIR "${XDG_DATA_HOME}/stardict"

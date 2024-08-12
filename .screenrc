@@ -1,0 +1,17 @@
+# Set master key to Ctrl-s
+escape ^S^S
+
+# Disable visual bell
+vbell off
+
+# Disable bell sound
+defbce on
+
+# Set the status line
+hardstatus alwaysfirstline "%{= kG}%-w%{= kR}%n %t%{-}%+w %-=%{= kG} %H | %l | %Y-%m-%d %c "
+
+# Enable 256 color
+term screen-256color
+
+# Allow bold colors - necessary for some color schemes
+attrcolor b ".I"
