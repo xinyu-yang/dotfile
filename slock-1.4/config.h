@@ -12,10 +12,11 @@ static const char *colorname[NUMCOLS] = {
 static const int failonclear = 1;
 
 /*Enable blur*/
-#define BLUR
+//#define BLUR
 /*Set blur radius*/
 static const int blurRadius=20;
+
 /*Enable Pixelation*/
-#define PIXELATION
+//#define PIXELATION
 /*Set pixelation radius*/
-static const int pixelSize=5;
+static const int pixelSize=20;
