@@ -8,7 +8,9 @@ vbell off
 defbce on
 
 # Set the status line
-hardstatus alwaysfirstline "%{= kG}%-w%{= kR}%n %t%{-}%+w %-=%{= kG} %H | %l | %Y-%m-%d %c "
+hardstatus alwaysfirstline
+#hardstatus string "%{= kG}%-w%{= kR}%n %t%{-}%+w %-=%{= kG} %H | %l | %Y-%m-%d %c "
+hardstatus string "%{= KW} %H [%`] %{= Kw}|%{-} %-Lw%{= bR}%n%f %t%{-}%+Lw %=%C%a %Y-%M-%d"
 
 # Enable 256 color
 term screen-256color
