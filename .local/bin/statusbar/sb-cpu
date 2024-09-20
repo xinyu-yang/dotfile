@@ -9,8 +9,8 @@ case $BLOCK_BUTTON in
 	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
 esac
 
-temp1=$(sensors | awk '/temp1:/ {print $2}')
-temp2=$(sensors | awk '/Core 0/ {print $3}')
+temp1=$(sensors | awk '/Package id 0:/ {print $4}')
+temp2=$(sensors | awk '/temp1:/ {print $2}')
 
 temp=${temp1:-${temp2}}
 printf " %s" $temp

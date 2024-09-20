@@ -17,9 +17,6 @@ then
 	stty -ixon
 fi
 
-# To enable nested tmux
-unset TMUX
-
 cat<<'EOF'
            _..._
          .'     '.
