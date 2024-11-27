@@ -77,7 +77,7 @@ st/tags
 !.local/share/stardict
 !.local/share/lf.bash
 
-.config/
+.config/*
 !.config/dunst/
 !.config/fcitx5/conf/*.conf
 !.config/fcitx5/config

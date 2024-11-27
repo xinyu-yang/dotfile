@@ -2,7 +2,7 @@
 #include ".extend.Xresources"
 #endif
 
-#include ".xrdb/color/blur"
+!#include ".xrdb/color/blur"
 
 Xft.dpi: 96
 Xft.antialias: true
