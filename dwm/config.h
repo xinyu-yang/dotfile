@@ -117,6 +117,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static const char *termcmd[]  = { TERMINAL, NULL };
+static const char *tabbedtermcmd[]  = { "tabbed", "-r", "2", "st", "-w", "''", NULL };
 
 /*
  * Xresources preferences to load at startup
@@ -220,8 +221,9 @@ static Key keys[] = {
 	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
 	{ MODKEY|ShiftMask,             XK_l,	        spawn,		SHCMD("i3lock & xset dpms force off; mpc pause; pauseallmpv") },
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
+	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd} },
 	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
+	{ MODKEY|ControlMask,		XK_Return,	spawn,		{.v = tabbedtermcmd} },
 
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */

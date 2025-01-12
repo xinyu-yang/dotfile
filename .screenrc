@@ -17,3 +17,5 @@ term screen-256color
 
 # Allow bold colors - necessary for some color schemes
 attrcolor b ".I"
+
+mousetrack on

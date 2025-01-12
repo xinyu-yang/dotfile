@@ -69,6 +69,8 @@ slock-1.4/slock
 slock-1.4/tags
 st/st
 st/tags
+tabbed-0.8/tabbed
+tabbed-0.8/xembed
 
 # https://stackoverflow.com/questions/3203228/git-ignore-exception
 .local/share/*
