@@ -48,7 +48,6 @@ fcitx5 &
 #picom &
 
 # set background
-~/.fehbg &
 
 autostart="mpd xcompmgr dunst unclutter pipewire remapd"
 
