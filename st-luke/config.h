@@ -6,7 +6,8 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "termfont:pixelsize=14:antialias=true:autohint=true:style=Bold";
-static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
+//static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
+static char *font2[] = { "WenQuanYi Micro Hei Mono:pixelsize=14:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
