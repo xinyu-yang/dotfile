@@ -34,3 +34,7 @@ progressbar_color = black:b
 progressbar_elapsed_color = blue:b
 statusbar_color = red
 statusbar_time_color = cyan:b
+
+follow_now_playing_lyrics = yes
+fetch_lyrics_for_current_song_in_background = yes
+store_lyrics_in_song_dir = no

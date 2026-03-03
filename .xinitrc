@@ -49,7 +49,7 @@ fcitx5 &
 
 # set background
 
-autostart="mpd xcompmgr dunst unclutter pipewire remapd"
+autostart="xcompmgr dunst unclutter pipewire remapd"
 
 for program in $autostart; do
 	pidof -sx "$program" || "$program" &

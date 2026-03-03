@@ -4,8 +4,20 @@ set -C -f
 IFS="$(printf '%b_' '\n')"; IFS="${IFS%_}"
 
 image() {
-	if [ -f "$1" ] && [ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && command -V ueberzug >/dev/null 2>&1; then
-		printf '{"action": "add", "identifier": "PREVIEW", "x": "%s", "y": "%s", "width": "%s", "height": "%s", "scaler": "contain", "path": "%s"}\n' "$4" "$5" "$(($2-1))" "$(($3-1))" "$1" > "$FIFO_UEBERZUG"
+	#if [ -f "$1" ] && [ -n "$DISPLAY" ] && [ -z "$WAYLAND_DISPLAY" ] && command -V ueberzug >/dev/null 2>&1; then
+		#if [ -n "${FIFO_UEBERZUG:-}" ] && [ -p "$FIFO_UEBERZUG" ]; then
+			#width="$(( $2 - 1 ))"
+			#height="$(( $3 - 1 ))"
+			#if command -V timeout >/dev/null 2>&1; then
+				#timeout 0.2s sh -c 'printf "{\"action\": \"add\", \"identifier\": \"PREVIEW\", \"x\": \"%s\", \"y\": \"%s\", \"width\": \"%s\", \"height\": \"%s\", \"scaler\": \"contain\", \"path\": \"%s\"}\\n\" "$1" "$2" "$3" "$4" "$5" > "$6"' sh "$4" "$5" "$width" "$height" "$1" "$FIFO_UEBERZUG"
+			#else
+				#printf '{"action": "add", "identifier": "PREVIEW", "x": "%s", "y": "%s", "width": "%s", "height": "%s", "scaler": "contain", "path": "%s"}\n' "$4" "$5" "$width" "$height" "$1" > "$FIFO_UEBERZUG"
+			#fi
+			#return 0
+		#fi
+	#fi
+	if command -V chafa >/dev/null 2>&1; then
+		chafa --fill=block --symbols=block -c 256 -s "${2}x${3}" "$1" || exit 1
 	else
 		mediainfo "$6"
 	fi
@@ -28,8 +40,8 @@ case "$(file --dereference --brief --mime-type -- "$1")" in
 	text/troff) man ./ "${1}" | col -b ;;
 	text/* | */xml | application/json | application/x-ndjson) bat -p --theme ansi --terminal-width "$(($4-2))" -f "$1" ;;
 	audio/* | application/octet-stream) mediainfo "$1" || exit 1 ;;
-	#application/zip | application/x-tar | application/gzip ) atool --list -- "${FILE_PATH}" ;;
-	application/zip ) unzip -l "${1}" | head -n 200;;
+	application/zip | application/x-tar | application/gzip ) atool --list -- "${1}" ;;
+	#application/zip ) unzip -l "${1}" | head -n 200;;
 	application/gzip | application/x-tar ) tar --list -f "${1}" | head -n 200 ;;
 	#image/*) chafa --fill=block --symbols=block -c 256 -s 80x"${2}" "${1}" || exit 1;;
 	image/*) image "$1" "$2" "$3" "$4" "$5" "$1" ;;
@@ -38,4 +50,4 @@ case "$(file --dereference --brief --mime-type -- "$1")" in
 	*opendocument*) odt2txt "${1}" ;;
 	*) head -n 100 "${1}" ;;
 esac
-exit 1
+exit 0

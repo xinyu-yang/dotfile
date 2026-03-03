@@ -73,6 +73,8 @@ tabbed-0.8/xembed
 # https://stackoverflow.com/questions/3203228/git-ignore-exception
 .local/share/*
 .local/state/*
+.local/bin/codex
+.local/lib/*
 !.local/share/larbs
 !.local/share/stardict
 !.local/share/lf.bash
