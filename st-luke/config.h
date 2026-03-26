@@ -6,8 +6,11 @@
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
 static char *font = "termfont:pixelsize=14:antialias=true:autohint=true:style=Bold";
-//static char *font2[] = { "NotoColorEmoji:pixelsize=10:antialias=true:autohint=true" };
-static char *font2[] = { "WenQuanYi Micro Hei Mono:pixelsize=14:antialias=true:autohint=true" };
+static char *font2[] = {
+	"WenQuanYi Micro Hei Mono:pixelsize=14:antialias=true:autohint=true",
+	"Noto Color Emoji:pixelsize=14:antialias=true:autohint=true",
+	"JoyPixels:pixelsize=14:antialias=true:autohint=true"
+};
 static int borderpx = 2;
 
 /*
@@ -555,4 +558,3 @@ static char ascii_printable[] =
 	" !\"#$%&'()*+,-./0123456789:;<=>?"
 	"@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
 	"`abcdefghijklmnopqrstuvwxyz{|}~";
-
