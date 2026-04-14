@@ -11,7 +11,7 @@ tspout="$(tsp -l)"
 case $BLOCK_BUTTON in
 	1) echo "$tspout" > "${XDG_CACHE_HOME:-$HOME/.cache}/tspout"
 		setsid -f "$TERMINAL" -e less "${XDG_CACHE_HOME:-$HOME/.cache}/tspout" ;;
-	3) notify-send "Tasks module" "🤖: number of running/queued background tasks
+	3) notify-send "Tasks module" "󰋼: number of running/queued background tasks
 - Left click opens tsp" ;; # Right click
 	2) $EDITOR "$0" ;; # Middle click
 esac
@@ -22,4 +22,4 @@ numq=$(echo "$tspout" | grep -c "queued")
 num=$((numr + numq))
 
 [ "$num" -gt 0 ] &&
-   echo "🤖$num($numq)"
+   echo "󰋼$num($numq)"

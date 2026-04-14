@@ -18,7 +18,7 @@ static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static char *fonts[]          = {
 	"wmfont:size=10:style=Bold",
-	"DejaVuSansM Nerd Font Mono:size=10:style=Bold",
+	"DejaVuSansM Nerd Font:size=12:style=Bold",
 	"WenQuanYi Micro Hei Mono:size=10",
 	"Noto Color Emoji:pixelsize=10:antialias=true:autohint=true",
 	"JoyPixels:pixelsize=10:antialias=true:autohint=true"
