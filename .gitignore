@@ -74,6 +74,7 @@ tabbed-0.8/xembed
 .local/share/*
 .local/state/*
 .local/bin/codex
+.local/bin/opencode
 .local/lib/*
 !.local/share/larbs
 !.local/share/stardict
